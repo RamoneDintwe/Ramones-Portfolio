@@ -1,167 +1,166 @@
-export const profile = {
-  name: 'Ramone Lebogang Dintwe',
-  headline: 'Cybersecurity | Blue Team | ICT',
-  tagline:
-    'Building practical cybersecurity and ICT skills through projects, labs, security analysis and continuous learning.',
-  status: 'Currently studying CompTIA Security+',
-  email: 'your.email@example.com', // placeholder — replace with your email
-  github: 'https://github.com/your-username', // placeholder — replace with your GitHub
-  linkedin: 'https://www.linkedin.com/in/your-profile', // placeholder — replace with your LinkedIn
-  cv: '/cv-placeholder.pdf', // placeholder — replace with your CV file
-}
+export const siteData = {
+  hero: {
+    name: "Ramone Lebogang Dintwe",
+    title: "Cybersecurity | Blue Team | ICT",
+    subtitle:
+      "Transitioning into cybersecurity and ICT through hands-on projects, home labs, and continuous learning.",
+    currentStudy: "CompTIA Security+",
+  },
 
-export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Lab', href: '#lab' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Certifications', href: '#certifications' },
-  { label: 'Contact', href: '#contact' },
-]
-
-export const currentFocus = [
-  'Blue Team fundamentals',
-  'Security monitoring',
-  'Python',
-  'SIEM',
-  'Networking',
-  'CompTIA Security+',
-]
-
-export type ProjectStatus = 'Built' | 'In Development' | 'Research / Planning'
-
-export type Project = {
-  title: string
-  description: string
-  status?: ProjectStatus
-  technologies?: string[]
-  securityConcepts?: string[]
-  links?: { label: string; href: string; primary?: boolean }[]
-}
-
-export const projects: Project[] = [
-  {
-    title: 'AI Phishing Analyser',
+  about: {
+    title: "About Me",
     description:
-      'A Python-based security tool that analyses .eml email files for phishing indicators and produces a risk score.',
-    status: 'Built',
-    technologies: ['Python', 'Regex', 'Email parsing', 'URL parsing', 'pytest'],
-    securityConcepts: [
-      'Phishing analysis',
-      'Email headers',
-      'Indicators of compromise',
-      'URL analysis',
-      'Risk scoring',
-    ],
-    links: [
-      { label: 'View Project', href: '#', primary: true },
-      { label: 'GitHub', href: '#' },
-    ],
+      "I am transitioning into cybersecurity and ICT through hands-on projects, practical labs, certifications, and continuous self-directed learning. My current focus is building strong Blue Team and security operations fundamentals while developing practical technical skills.",
   },
-  {
-    title: 'Blue Team Home Lab',
-    description:
-      'A virtualised cybersecurity lab designed for practising security monitoring, log analysis, SIEM operations and incident investigation.',
-    status: 'In Development',
-    technologies: ['Wazuh', 'Windows', 'Linux', 'Virtualisation', 'pfSense'],
-  },
-  {
-    title: 'Smishing Detection Project',
-    description:
-      'An early-stage project exploring detection and filtering of malicious SMS and smishing messages.',
-    status: 'Research / Planning',
-  },
-]
 
-export type SkillCategory = {
-  title: string
-  skills: string[]
-}
+  projects: [
+    {
+      title: "AI Phishing Analyser",
+      description:
+        "A lightweight Python-based .eml analyser that identifies phishing indicators, suspicious URLs, email header signals, and produces an explainable risk assessment.",
+      status: "Built",
+      technologies: [
+        "Python",
+        "Regex",
+        "Email parsing",
+        "URL analysis",
+        "pytest",
+      ],
+      securityConcepts: [
+        "Phishing analysis",
+        "Email security",
+        "IOCs",
+        "URL analysis",
+        "Risk scoring",
+      ],
+    },
 
-export const skillCategories: SkillCategory[] = [
-  {
-    title: 'Cybersecurity',
-    skills: [
-      'Phishing analysis',
-      'Security monitoring fundamentals',
-      'Incident response fundamentals',
-      'Email security',
-      'Network security fundamentals',
-      'SIEM fundamentals',
-    ],
-  },
-  {
-    title: 'Programming & Scripting',
-    skills: ['Python', 'PowerShell', 'Bash'],
-  },
-  {
-    title: 'Systems & Infrastructure',
-    skills: ['Windows', 'Linux', 'Virtualisation', 'Docker', 'Networking'],
-  },
-  {
-    title: 'Development Tools',
-    skills: ['Git', 'GitHub', 'VS Code', 'pytest'],
-  },
-]
+    {
+      title: "SA Smishing Detector",
+      description:
+        "A rule-based SMS smishing detector focused on South African scam patterns, including bank and telecom impersonation, SASSA/SARS fraud, courier scams, investment bait and malicious URLs.",
+      status: "Built",
+      technologies: [
+        "Python",
+        "Regex",
+        "URL analysis",
+        "Rule-based detection",
+        "pytest",
+      ],
+      securityConcepts: [
+        "Smishing detection",
+        "Social engineering",
+        "Brand impersonation",
+        "URL analysis",
+        "Risk scoring",
+      ],
+      links: [
+        {
+          label: "GitHub",
+          href: "https://github.com/RamoneDintwe/SA-Smishing-Detector",
+          primary: true,
+        },
+      ],
+    },
 
-export const certifications = {
-  completed: [
-    'Google Cybersecurity Professional Certificate',
-    'Digital Literacy training',
-    'AI for Government',
-    'Introduction to Project Management',
-    'Cisco Packet Tracer training',
+    {
+      title: "Blue Team Home Lab",
+      description:
+        "A planned security lab for Windows and Linux monitoring, Wazuh SIEM, pfSense, simulated attacks, detection engineering and incident response.",
+      status: "In Development",
+      technologies: [
+        "Wazuh",
+        "Windows",
+        "Linux",
+        "pfSense",
+        "Virtualization",
+      ],
+      securityConcepts: [
+        "Security monitoring",
+        "SIEM",
+        "Detection engineering",
+        "Incident response",
+        "Network security",
+      ],
+    },
   ],
-  learning: [
-    'CompTIA Security+',
-    'Python',
-    'Blue Team security operations',
-    'SIEM',
-    'PowerShell',
-  ],
-}
 
-export type TimelineEntry = {
-  year: string
-  title: string
-}
+  skills: {
+    cybersecurity: [
+      "Phishing analysis",
+      "Security monitoring fundamentals",
+      "Incident response fundamentals",
+      "Email security",
+      "Network security fundamentals",
+      "SIEM fundamentals",
+    ],
 
-export const timeline: TimelineEntry[] = [
-  { year: '2026', title: 'Google Cybersecurity Professional Certificate' },
-  { year: '2026', title: 'AI Phishing Analyser' },
-  { year: '2026', title: 'CompTIA Security+ Preparation' },
-  { year: '2026', title: 'Blue Team Home Lab' },
-]
+    programming: ["Python", "PowerShell", "Bash"],
 
-export type LabNode = {
-  name: string
-  note?: string
-}
-
-export const labNetworks: { name: string; systems: LabNode[] }[] = [
-  {
-    name: 'Corp Network',
     systems: [
-      { name: 'Windows Client' },
-      { name: 'Windows Server / Domain Controller' },
+      "Windows",
+      "Linux",
+      "Virtualization",
+      "Docker",
+      "Networking",
     ],
-  },
-  {
-    name: 'Management Network',
-    systems: [{ name: 'Wazuh SIEM' }, { name: 'Linux Server' }],
-  },
-  {
-    name: 'Attack Network',
-    systems: [{ name: 'Kali Linux' }],
-  },
-]
 
-export const labPractices = [
-  'log collection',
-  'detection',
-  'alert investigation',
-  'network monitoring',
-  'Windows security',
-  'simulated attacks',
-  'incident response',
-]
+    tools: ["Git", "GitHub", "VS Code", "pytest"],
+  },
+
+  certifications: [
+    "Google Cybersecurity Professional Certificate",
+    "Digital Literacy",
+    "AI for Government",
+    "Introduction to Project Management",
+    "Cisco Packet Tracer",
+  ],
+
+  learning: [
+    "CompTIA Security+",
+    "Python",
+    "Blue Team security operations",
+    "SIEM",
+    "PowerShell",
+  ],
+
+  timeline: [
+    {
+      year: "2026",
+      title: "Google Cybersecurity Professional Certificate",
+      description:
+        "Completed foundational cybersecurity training and began transitioning into practical security projects.",
+    },
+    {
+      year: "2026",
+      title: "AI Phishing Analyser",
+      description:
+        "Built a Python-based email phishing analysis tool focused on explainable detection and risk scoring.",
+    },
+    {
+      year: "2026",
+      title: "SA Smishing Detector",
+      description:
+        "Built a rule-based SMS smishing detector focused on South African scam patterns and explainable risk scoring.",
+    },
+    {
+      year: "2026",
+      title: "Security+ Preparation",
+      description:
+        "Currently preparing for CompTIA Security+ while strengthening cybersecurity fundamentals.",
+    },
+    {
+      year: "2026",
+      title: "Blue Team Home Lab",
+      description:
+        "Developing a practical security monitoring and incident response laboratory.",
+    },
+  ],
+
+  contact: {
+    email: "your.email@example.com",
+    github: "https://github.com/RamoneDintwe",
+    linkedin: "https://www.linkedin.com/in/ramone-lebogang-dintwe-65a65a17b",
+  },
+}
+   
